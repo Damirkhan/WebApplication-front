@@ -1,0 +1,40 @@
+<div class="home">
+  <div class="margin-2">
+
+  </div>
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="card">
+        <a class="card-header">Featured</a>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <br>
+      <div class="card">
+        <a class="card-header">Featured</a>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div  class="col-lg-4">
+      <div *ngIf="users" class="list-items" style="margin-top: 40px">
+        <div class="item" style="margin-bottom: 20px" *ngFor="let user of users;let i = index;">
+          <div class="item-img" *ngIf="getImage(user.imageProfileName)">
+            <img src="" alt="">
+          </div>
+          <div class="item-name">
+            <p class="email">{{user.login}}</p>
+            <p>{{user.firstName}} {{user.lastName}}</p>
+          </div>
+          <button mat-button color="primary">follow</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

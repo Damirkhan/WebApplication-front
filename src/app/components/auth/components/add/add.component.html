@@ -1,0 +1,22 @@
+<div class="add">
+  <div class="margin-2">
+
+  </div>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <h1>Add Post</h1>
+    <div class="formcontainer">
+      <hr/>
+      <div class="container">
+        <label for="title"><strong>Title...</strong></label>
+        <input type="text" placeholder="Title..." id="title" required formControlName="title">
+        <div class="form-group">
+          <label for="content">Content: </label>
+          <quill-editor  id="content" formControlName="text"></quill-editor>
+        </div>
+      </div>
+      <button type="submit" style="background-color: cadetblue" [disabled]="form.invalid">Add Post</button>
+      <div class="container" style="background-color: #eee">
+      </div>
+      </div>
+  </form>
+</div>

@@ -1,0 +1,24 @@
+
+<div class="margin-8">
+
+</div>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="icon">
+    <i class="fas fa-user-alt" style="color: cadetblue"></i>
+  </div>
+  <div class="formcontainer">
+    <div class="container">
+      <label for="login"><strong>Username</strong></label>
+      <input type="text" placeholder="Enter Username" id="login" required formControlName="login">
+      <label for="psw"><strong>Password</strong></label>
+      <input type="password" placeholder="Enter Password" id="psw" required formControlName="password">
+    </div>
+    <button style="background-color: cadetblue" class="btn btn-primary" type="submit" [disabled]="form.invalid"><strong>Войти</strong></button>
+    <div class="container" style="background-color: #eee">
+      <label style="padding-left: 15px">
+        <input type="checkbox"  checked="checked" name="remember"> Remember me
+      </label>
+      <span class="psw"><a class="btn" [routerLink]="['/register']">Регистрация</a></span>
+    </div>
+    </div>
+</form>

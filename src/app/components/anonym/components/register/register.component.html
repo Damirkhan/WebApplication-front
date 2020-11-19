@@ -1,0 +1,45 @@
+<div class="margin-8">
+
+</div>
+<div class="alert alert-{{errorColor}}" *ngIf="isTrue">
+  {{errorText}}
+</div>
+<div class="main-block">
+  <h1>Registration</h1>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <hr>
+    <div class="account-type">
+      <input type="radio" value="none" id="radioOne" name="account" checked/>
+      <label for="radioOne" class="radio">Personal</label>
+      <input type="radio" value="none" id="radioTwo" name="account" />
+      <label for="radioTwo" class="radio">Company</label>
+    </div>
+    <hr>
+    <label id="icon" for="login"><i class="fas fa-envelope"></i></label>
+    <input type="text" id="login" placeholder="Login" formControlName="login" required/>
+
+    <label id="icon" for="first_name"><i class="fas fa-user"></i></label>
+    <input type="text" id="first_name" placeholder="First Name" formControlName="firstName" required/>
+
+    <label id="icon" for="last_name"><i class="fas fa-user"></i></label>
+    <input type="text" id="last_name" placeholder="Last Name" formControlName="lastName" required/>
+
+    <label id="icon" for="phone"><i class="fas fa-phone"></i></label>
+    <input type="text" id="phone" placeholder="+7(700)-999-99-99" formControlName="phone" required/>
+
+    <label for="password" id="icon"><i class="fas fa-unlock-alt"></i></label>
+    <input type="password" id="password" placeholder="Password" required formControlName="password"/>
+    <hr>
+    <div class="gender">
+      <input type="radio" value="none" id="male" name="gender" checked/>
+      <label for="male" class="radio">Male</label>
+      <input type="radio" value="none" id="female" name="gender" />
+      <label for="female" class="radio">Female</label>
+    </div>
+    <hr>
+    <div class="btn-block">
+      <p><a style="color: cadetblue" [routerLink]="['/login']">У вас есть аккаунт</a>.</p>
+      <button type="submit" href="/">Submit</button>
+    </div>
+  </form>
+</div>
